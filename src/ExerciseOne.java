@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class ExerciseOne {
     public static int matchDetector(String outerString, String innerString) {
         int matchIndicator = -1;
-        int[] matchPlace=new int[outerString.length()];
-        for (int i = 0; i <outerString.length(); i++) {
+        int[] matchPlace = new int[outerString.length()];
+        for (int i = 0; i < outerString.length(); i++) {
             if (innerString.charAt(0) == outerString.charAt(i)) {
                 matchPlace[i] = 1;
             }
         }
-        for(int t=0; t<outerString.length();t++){
+        for (int t = 0; t < outerString.length(); t++) {
             if (matchPlace[t] == 0) {
                 continue;
             } else {
@@ -21,7 +21,7 @@ public class ExerciseOne {
                         matchIndicator = 1;
                     }
                 }
-                if (matchIndicator==1){
+                if (matchIndicator == 1) {
                     break;
                 }
             }

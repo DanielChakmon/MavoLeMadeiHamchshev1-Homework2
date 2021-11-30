@@ -13,7 +13,7 @@ public class ExerciseFive {
                 isInDecline = false;
             } else if (userArray[i] != userArray[i - 1]) {
                 isInDecline = true;
-                peachPoint = i-1;
+                peachPoint = i - 1;
             } else {
                 peachPoint = -1;
                 break;

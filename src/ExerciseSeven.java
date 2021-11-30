@@ -1,4 +1,3 @@
-import javax.swing.text.StyledEditorKit;
 import java.util.Scanner;
 
 public class ExerciseSeven {
@@ -89,7 +88,7 @@ public class ExerciseSeven {
             System.out.println("looks like you're stuck!, no winners this round:(");
             isStuck = true;
         } else {
-            isStuck=false;
+            isStuck = false;
         }
         return isStuck;
     }
@@ -111,7 +110,7 @@ public class ExerciseSeven {
             System.out.println(whichPlayer + "'s turn:");
             int selectedPlace = getPositionFromUser(boardSymbols);
             isThereAWinner = placeSymbolsOnBoard(boardSymbols, selectedPlace, whichPlayer);
-            isStuck=checkIfStuck(isThereAWinner,numberOfTurns);
+            isStuck = checkIfStuck(isThereAWinner, numberOfTurns);
         }
     }
 }

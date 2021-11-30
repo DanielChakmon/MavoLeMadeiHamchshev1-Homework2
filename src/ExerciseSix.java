@@ -12,12 +12,12 @@ public class ExerciseSix {
                 }
             }
         }
-        int[] intersection = duplicatesRemover(temp,(firstUnoccupiedCell-1));
+        int[] intersection = duplicatesRemover(temp, (firstUnoccupiedCell - 1));
         return intersection;
     }
 
 
-    public static int[] duplicatesRemover(int[] userArray,int lastRelevantNumberPlace) {
+    public static int[] duplicatesRemover(int[] userArray, int lastRelevantNumberPlace) {
         int[] temp = new int[userArray.length];
         boolean duplicateIndicator = false;
         int uniqueNumberCount = 0;
@@ -68,20 +68,22 @@ public class ExerciseSix {
         }
         return areTheyStrangers;
     }
-public static int[] arrayTaker(String arrayName){
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("please enter your " +arrayName+ " array size");
-    int arraySize = scanner.nextInt();
-    int[] takenArray = new int[arraySize];
-    for (int i = 0; i < arraySize; i++) {
-        System.out.println("please enter the " + (i + 1) + "st/nd/rd/th number in the array");
-        takenArray[i] = scanner.nextInt();
+
+    public static int[] arrayTaker(String arrayName) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("please enter your " + arrayName + " array size");
+        int arraySize = scanner.nextInt();
+        int[] takenArray = new int[arraySize];
+        for (int i = 0; i < arraySize; i++) {
+            System.out.println("please enter the " + (i + 1) + "st/nd/rd/th number in the array");
+            takenArray[i] = scanner.nextInt();
+        }
+        return takenArray;
     }
-    return takenArray;
-}
+
     public static void main(String[] args) {
-        int[] firstArray= arrayTaker("first");
-        int[] secondArray= arrayTaker("second");
+        int[] firstArray = arrayTaker("first");
+        int[] secondArray = arrayTaker("second");
         int[] intersection = intersectionFinder(firstArray, secondArray);
         for (int j = 0; j < intersection.length; j++) {
             System.out.print(intersection[j]);
@@ -90,6 +92,6 @@ public static int[] arrayTaker(String arrayName){
             }
         }
         System.out.println(" ");
-           System.out.println("are they strangers? : "+strangerChecker(firstArray,secondArray));
+        System.out.println("are they strangers? : " + strangerChecker(firstArray, secondArray));
     }
 }
